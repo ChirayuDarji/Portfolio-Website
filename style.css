@@ -1,31 +1,159 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 2rem;
-  }
-  
-  .nav-links {
-    list-style: none;
+/*Header*/  
+.navbar {
+    width: 1850px;
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: #2c3e50; /* Dark blue-gray background */
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
-  .nav-links li a {
+  /* Logo Styling */
+  .logo a {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .logo a:hover {
+    color: #3498db; /* Light blue on hover */
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .nav-link {
     color: white;
     text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
   }
   
+  .nav-link:hover {
+    color: #3498db;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-link.active {
+    color: #3498db;
+  }
+  
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: #3498db;
+    border-radius: 50%;
+  }
+  
+  /* Mobile Menu Button (Hidden by default) */
+  .hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem 1.5rem;
+    }
+    
+    .hamburger {
+      display: block;
+      z-index: 1001;
+    }
+    
+    /* Animation for hamburger when active */
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: #2c3e50;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+      transition: right 0.5s ease;
+      z-index: 1000;
+    }
+    
+    .nav-links.active {
+      right: 0;
+    }
+    
+    .nav-link {
+      font-size: 1.3rem;
+      padding: 0.8rem 1.5rem;
+    }
+    
+    .nav-link.active::after {
+      bottom: -8px;
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+/* Hero Section */  
   #hero {
     padding: 5rem 2rem;
     text-align: center;
     background: #f0f0f0;
+    margin-top: 80px; /* adjust as per navbar height */
   }
   
   .btn {
@@ -37,6 +165,17 @@ body {
     margin-top: 1rem;
     display: inline-block;
   }
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  form input, form textarea {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+    padding: 0.5rem;
+  }
+    
   
   section {
     padding: 3rem 2rem;
