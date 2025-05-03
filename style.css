@@ -1,3 +1,51 @@
-body{
-    height: auto;
-}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  #hero {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: #f0f0f0;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+  
+  section {
+    padding: 3rem 2rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: #ccc;
+  }
+  
