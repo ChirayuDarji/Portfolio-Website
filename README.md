@@ -1,5 +1,5 @@
 
-Chirayu Darji | Full Stack Developer Portfolio
+Chirayu Darji | Full Stack Developer Portfolio<br>
 👋 Welcome
 Hi there! I'm Chirayu Darji, a Full Stack Developer based in Ahmedabad, India. This portfolio is a showcase of my work and skills in building responsive and dynamic web applications.
 ✨ Features
