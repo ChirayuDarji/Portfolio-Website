@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Chirayu Darji | Full Stack Developer</title>
-</head>
 <body>
   <h1>Chirayu Darji | Full Stack Developer</h1>
 
@@ -25,4 +19,4 @@
     <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, Tailwind CSS, Font Awesome</li>
   </ul>
 </body>
-</html>
+
