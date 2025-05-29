@@ -41,12 +41,6 @@ ul {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block; /* Helps remove extra space below images */
-}
-
 .container {
   width: 90%;
   max-width: 1200px;
@@ -251,12 +245,7 @@ img {
 }
 
 /* ===== About Section ===== */
-.about-content {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
-}
+
 
 .about-text {
   flex: 1;
@@ -439,14 +428,14 @@ img {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: var(--primary-color);
-  color: var(--white);
+  /* Removed: background: var(--primary-color); -- This is now handled by Tailwind class */
+  color: var(--white); /* Keep this if you want the icon color to be white */
   border-radius: 50%;
   transition: var(--transition);
 }
 
 .social-links a:hover {
-  background: var(--secondary-color);
+  background: var(--secondary-color); /* Keep this for the hover background */
   transform: translateY(-3px);
 }
 
