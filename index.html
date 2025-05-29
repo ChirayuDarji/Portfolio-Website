@@ -52,7 +52,7 @@
             <p>With experience in HTML, CSS, JavaScript, React, and Laravel, I bring comprehensive solutions to complex web development challenges.</p>
           </div>
           <div class="about-image">
-            <img src="images/profile.jpg" alt="Chirayu Darji" width="300" height="300" />
+            <img src="Portfolio-Website/profile.png" alt="Chirayu Darji" width="300" height="300" />
           </div>
         </div>
       </div>
@@ -193,12 +193,12 @@
         anchor.addEventListener('click', function(e) {
           e.preventDefault();
           const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
+          if (targetId === '#') return; // Prevent scrolling to top if href is just '#'
           
           const targetElement = document.querySelector(targetId);
           if (targetElement) {
             window.scrollTo({
-              top: targetElement.offsetTop - 80,
+              top: targetElement.offsetTop - 80, // Adjust for fixed header if any
               behavior: 'smooth'
             });
           }
